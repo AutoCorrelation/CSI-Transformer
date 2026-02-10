@@ -11,3 +11,20 @@
 
 ## Documents
 - [딥 러닝을 이용한 자연어 처리 입문](https://wikidocs.net/35596)
+
+## Project: CSI Transformer (5G Toolbox + PyTorch)
+
+This codebase generates CSI data in MATLAB (5G Toolbox) for the 28 GHz, 60 km/h scenario with SRS period 0.625 ms, then trains a Transformer to predict CSI and compares achievable sum-rate between perfect and predicted CSI.
+
+### 1) Generate dataset (MATLAB)
+- Open and run [matlab/generate_dataset.m](matlab/generate_dataset.m).
+- Output: [data/csi_dataset.mat](data/csi_dataset.mat)
+
+### 2) Train Transformer (Python)
+- Install dependencies from [python/requirements.txt](python/requirements.txt).
+- Run [python/train_transformer.py](python/train_transformer.py).
+- Output: [data/results.npz](data/results.npz)
+
+### 3) Plot sum-rate comparison
+- Run [python/plot_results.py](python/plot_results.py).
+- Output: [data/sum_rate.png](data/sum_rate.png)
